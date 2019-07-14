@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.mybatis.plus.demo.mapper.ProtocolMapper">
+
+    <!-- 通用查询映射结果 -->
+    <resultMap id="BaseResultMap" type="com.mybatis.plus.demo.entity.Protocol">
+        <id column="c_id" property="cId" />
+        <result column="n_graduateId" property="nGraduateid" />
+        <result column="c_unitId" property="cUnitid" />
+        <result column="c_fileRecUnit" property="cFilerecunit" />
+        <result column="c_fileRecAdd" property="cFilerecadd" />
+        <result column="c_contact" property="cContact" />
+        <result column="c_zipCode" property="cZipcode" />
+        <result column="c_accRecUnit" property="cAccrecunit" />
+        <result column="c_orgRecUnit" property="cOrgrecunit" />
+    </resultMap>
+
+    <!-- 通用查询结果列 -->
+    <sql id="Base_Column_List">
+        c_id AS cId, n_graduateId AS nGraduateid, c_unitId AS cUnitid, c_fileRecUnit AS cFilerecunit, c_fileRecAdd AS cFilerecadd, c_contact AS cContact, c_zipCode AS cZipcode, c_accRecUnit AS cAccrecunit, c_orgRecUnit AS cOrgrecunit
+    </sql>
+
+</mapper>

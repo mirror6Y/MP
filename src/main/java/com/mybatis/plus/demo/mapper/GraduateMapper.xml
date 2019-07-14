@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.mybatis.plus.demo.mapper.GraduateMapper">
+
+    <!-- 通用查询映射结果 -->
+    <resultMap id="BaseResultMap" type="com.mybatis.plus.demo.entity.Graduate">
+        <id column="n_id" property="nId" />
+        <result column="c_name" property="cName" />
+        <result column="c_idCard" property="cIdcard" />
+        <result column="n_gender" property="nGender" />
+        <result column="c_people" property="cPeople" />
+        <result column="c_politicalStatus" property="cPoliticalstatus" />
+        <result column="c_college" property="cCollege" />
+        <result column="c_profession" property="cProfession" />
+        <result column="c_grade" property="cGrade" />
+        <result column="c_tel" property="cTel" />
+        <result column="d_graduateTime" property="dGraduatetime" />
+        <result column="c_education" property="cEducation" />
+        <result column="c_degree" property="cDegree" />
+        <result column="c_address" property="cAddress" />
+    </resultMap>
+
+    <!-- 通用查询结果列 -->
+    <sql id="Base_Column_List">
+        n_id AS nId, c_name AS cName, c_idCard AS cIdcard, n_gender AS nGender, c_people AS cPeople, c_politicalStatus AS cPoliticalstatus, c_college AS cCollege, c_profession AS cProfession, c_grade AS cGrade, c_tel AS cTel, d_graduateTime AS dGraduatetime, c_education AS cEducation, c_degree AS cDegree, c_address AS cAddress
+    </sql>
+
+</mapper>
