@@ -1,73 +1,80 @@
 package com.mybatis.plus.demo.entity;
 
-import com.baomidou.mybatisplus.activerecord.Model;
-import com.baomidou.mybatisplus.annotations.TableField;
-import com.baomidou.mybatisplus.annotations.TableId;
-import com.baomidou.mybatisplus.annotations.TableName;
-import lombok.Getter;
-import lombok.Setter;
-
 import java.io.Serializable;
+
+import com.baomidou.mybatisplus.annotations.TableId;
+import com.baomidou.mybatisplus.annotations.TableField;
+import com.baomidou.mybatisplus.activerecord.Model;
+import com.baomidou.mybatisplus.annotations.TableName;
+import java.io.Serializable;
+
+import com.baomidou.mybatisplus.annotations.Version;
+
+import lombok.Data;
+import lombok.EqualsAndHashCode;
+import lombok.experimental.Accessors;
 
 /**
  * <p>
- * 教师实体类
+ *
  * </p>
  *
- * @author mirror6
- * @since 2019-07-07
+ * @author mirror6123
+ * @since 2019-07-31
  */
-@Setter
-@Getter
+@Data
+@EqualsAndHashCode(callSuper = true)
+@Accessors(chain = true)
 @TableName("t_teacher")
 public class Teacher extends Model<Teacher> {
 
     private static final long serialVersionUID = 1L;
 
     /**
-     * 工号
+     * 教师工号
      */
-    @TableId("n_id")
-    private Integer nId;
+    @TableId("C_ID")
+    private String cId;
     /**
      * 密码
      */
-    @TableField("c_password")
+    @TableField("C_PASSWORD")
     private String cPassword;
     /**
      * 姓名
      */
-    @TableField("c_name")
+    @TableField("C_NAME")
     private String cName;
     /**
      * 性别
      */
-    @TableField("n_gender")
+    @TableField("N_GENDER")
     private Integer nGender;
     /**
      * 院系
      */
-    @TableField("c_college")
-    private String cCollege;
+    @TableField("N_COLLEGE")
+    private Integer nCollege;
     /**
      * 办公室
      */
-    @TableField("c_office")
+    @TableField("C_OFFICE")
     private String cOffice;
     /**
      * 联系方式
      */
-    @TableField("c_tel")
+    @TableField("C_TEL")
     private String cTel;
     /**
      * 权限
      */
-    @TableField("c_permission")
-    private String cPermission;
+    @TableField("N_PERMISSION")
+    private Integer nPermission;
+
 
     @Override
     protected Serializable pkVal() {
-        return this.nId;
+        return this.cId;
     }
 
 }

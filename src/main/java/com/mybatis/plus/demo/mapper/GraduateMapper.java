@@ -8,8 +8,8 @@ import com.baomidou.mybatisplus.mapper.BaseMapper;
  *  Mapper 接口
  * </p>
  *
- * @author mirror6123
- * @since 2019-07-07
+ * @author mirror6
+ * @since 2019-07-31
  */
 public interface GraduateMapper extends BaseMapper<Graduate> {
 

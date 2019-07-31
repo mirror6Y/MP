@@ -2,21 +2,24 @@
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 <mapper namespace="com.mybatis.plus.demo.mapper.TeacherMapper">
 
+    <!-- 开启二级缓存 -->
+    <cache type="org.mybatis.caches.ehcache.LoggingEhcache"/>
+
     <!-- 通用查询映射结果 -->
     <resultMap id="BaseResultMap" type="com.mybatis.plus.demo.entity.Teacher">
-        <id column="n_id" property="nId" />
-        <result column="c_password" property="cPassword" />
-        <result column="c_name" property="cName" />
-        <result column="n_gender" property="nGender" />
-        <result column="c_college" property="cCollege" />
-        <result column="c_office" property="cOffice" />
-        <result column="c_tel" property="cTel" />
-        <result column="c_permission" property="cPermission" />
+        <id column="C_ID" property="cId" />
+        <result column="C_PASSWORD" property="cPassword" />
+        <result column="C_NAME" property="cName" />
+        <result column="N_GENDER" property="nGender" />
+        <result column="N_COLLEGE" property="nCollege" />
+        <result column="C_OFFICE" property="cOffice" />
+        <result column="C_TEL" property="cTel" />
+        <result column="N_PERMISSION" property="nPermission" />
     </resultMap>
 
     <!-- 通用查询结果列 -->
     <sql id="Base_Column_List">
-        n_id AS nId, c_password AS cPassword, c_name AS cName, n_gender AS nGender, c_college AS cCollege, c_office AS cOffice, c_tel AS cTel, c_permission AS cPermission
+        C_ID AS cId, C_PASSWORD AS cPassword, C_NAME AS cName, N_GENDER AS nGender, N_COLLEGE AS nCollege, C_OFFICE AS cOffice, C_TEL AS cTel, N_PERMISSION AS nPermission
     </sql>
 
 </mapper>

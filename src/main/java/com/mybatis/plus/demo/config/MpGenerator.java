@@ -7,12 +7,12 @@ import com.baomidou.mybatisplus.generator.config.rules.NamingStrategy;
 
 
 /**
- * @auther mirror6
+ * @author mirror6
  * @date 2019/7/7 10:28
  */
 public class MpGenerator {
 
-    private final static String path = "D://";
+    private final static String PATH = "D://";
 
     /**
      * <p>
@@ -26,18 +26,22 @@ public class MpGenerator {
 
         // 数据源配置
         DataSourceConfig dsc = new DataSourceConfig();
-        dsc.setDbType(DbType.MYSQL);//数据库类型
+        //数据库类型
+        dsc.setDbType(DbType.MYSQL);
         dsc.setDriverName("com.mysql.cj.jdbc.Driver");
         dsc.setUsername("root");
         dsc.setPassword("mirror6");
-        dsc.setUrl("jdbc:mysql://localhost:3306/city_graduate?serverTimezone=GMT%2B8&amp&useSSL=false&autoReconnect=true&failOverReadOnly=false");
+        dsc.setUrl("jdbc:mysql://localhost:3306/city_topic?serverTimezone=GMT%2B8&amp&useSSL=false&autoReconnect=true&failOverReadOnly=false");
         mpg.setDataSource(dsc);
 
         // 数据库表配置
         StrategyConfig strategy = new StrategyConfig();
-        strategy.setNaming(NamingStrategy.underline_to_camel);// 表名生成策略
-        strategy.setTablePrefix("t_");//此处是的表前缀,实体类不会生成
-        strategy.setEntityLombokModel(true);//【实体】是否为lombok模型（默认 false）
+        // 表名生成策略
+        strategy.setNaming(NamingStrategy.underline_to_camel);
+        //此处是的表前缀,实体类不会生成
+        strategy.setTablePrefix("t_");
+        //【实体】是否为lombok模型（默认 false）
+        strategy.setEntityLombokModel(true);
         mpg.setStrategy(strategy);
 
         // 包配置
@@ -54,12 +58,17 @@ public class MpGenerator {
 
         // 全局配置
         GlobalConfig gc = new GlobalConfig();
-        gc.setOutputDir(path);//生成文件的输出目录
-        gc.setAuthor("mirror6");//作者
-        gc.setFileOverride(true); //是否覆盖已有文件
-        gc.setActiveRecord(true);// 不需要ActiveRecord特性的请改为false
-        gc.setBaseResultMap(true);// 开启XML BaseResultMap
-        gc.setBaseColumnList(true);// 开启XML BaseColumnList
+        //生成文件的输出目录
+        gc.setOutputDir(PATH);
+        gc.setAuthor("mirror6");
+        //是否覆盖已有文件
+        gc.setFileOverride(true);
+        // 不需要ActiveRecord特性的请改为false
+        gc.setActiveRecord(true);
+        // 开启XML BaseResultMap
+        gc.setBaseResultMap(true);
+        // 开启XML BaseColumnList
+        gc.setBaseColumnList(true);
         mpg.setGlobalConfig(gc);
 
         TemplateConfig tc = new TemplateConfig();
