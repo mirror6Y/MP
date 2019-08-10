@@ -26,7 +26,7 @@
 
     <!-- 通用查询结果列 -->
     <sql id="Base_Column_List">
-        C_ID AS cId, C_PASSWORD AS cPassword, C_NAME AS cName, N_GENDER AS nGender, N_COLLEGE AS nCollege, N_PROFESSION AS nProfession, C_GRADE AS cGrade, C_TEL AS cTel, N_PEOPLE AS nPeople, N_POLITICALSTATUS AS nPoliticalstatus, C_IDCARD AS cIdcard, N_EDUCATION AS nEducation, N_DEGREE AS nDegree, C_ADDRESS AS cAddress, D_GRADUATETIME AS dGraduatetime
+        C_ID AS cId, C_PASSWORD AS cPassword, C_NAME AS cName, N_GENDER AS nGender, N_COLLEGE AS nCollege, N_PROFESSION AS nProfession, C_GRADE AS cGrade, C_TEL AS cTel, N_PEOPLE AS nPeople, N_POLITICALSTATUS AS nPoliticalStatus, C_IDCARD AS cIdCard, N_EDUCATION AS nEducation, N_DEGREE AS nDegree, C_ADDRESS AS cAddress, D_GRADUATETIME AS dGraduateTime
     </sql>
 
 </mapper>

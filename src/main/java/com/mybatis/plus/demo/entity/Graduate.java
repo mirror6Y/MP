@@ -16,7 +16,7 @@ import lombok.experimental.Accessors;
 
 /**
  * <p>
- *
+ * 毕业生实体类
  * </p>
  *
  * @author mirror6

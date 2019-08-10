@@ -13,10 +13,10 @@ import java.io.Serializable;
 
 /**
  * <p>
- *
+ * 教师实体类
  * </p>
  *
- * @author mirror6123
+ * @author mirror6
  * @since 2019-07-31
  */
 @Data
