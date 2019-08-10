@@ -1,9 +1,9 @@
 package com.mybatis.plus.demo.service.impl;
 
+import com.baomidou.mybatisplus.extension.service.impl.ServiceImpl;
 import com.mybatis.plus.demo.entity.Graduate;
 import com.mybatis.plus.demo.mapper.GraduateMapper;
 import com.mybatis.plus.demo.service.IGraduateService;
-import com.baomidou.mybatisplus.service.impl.ServiceImpl;
 import org.springframework.stereotype.Service;
 
 /**

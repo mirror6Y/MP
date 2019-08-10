@@ -1,14 +1,13 @@
 package com.mybatis.plus.demo.controller;
 
 
-import com.mybatis.plus.demo.Constants;
+import com.mybatis.plus.demo.util.Constants;
 import com.mybatis.plus.demo.entity.Teacher;
 import com.mybatis.plus.demo.service.ITeacherService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 
-import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RestController;
 
 /**
@@ -42,7 +41,7 @@ public class TeacherController {
     public String addTeacher() {
         Teacher teacher=new Teacher();
         teacher.setCId("123");
-        teacherService.insert(teacher);
+        teacherService.save(teacher);
         return Constants.C_SUCCESS;
     }
 

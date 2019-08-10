@@ -1,11 +1,11 @@
-package com.mybatis.plus.demo;
+package com.mybatis.plus.demo.util;
 
 /**
  * @author mirror6
  * @description
  * @date 2019/8/2 16:59
  */
-public class Constants {
+public final class Constants {
 
     /**
      * 操作成功

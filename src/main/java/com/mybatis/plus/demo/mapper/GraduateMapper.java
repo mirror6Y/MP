@@ -1,7 +1,7 @@
 package com.mybatis.plus.demo.mapper;
 
+import com.baomidou.mybatisplus.core.mapper.BaseMapper;
 import com.mybatis.plus.demo.entity.Graduate;
-import com.baomidou.mybatisplus.mapper.BaseMapper;
 
 /**
  * <p>

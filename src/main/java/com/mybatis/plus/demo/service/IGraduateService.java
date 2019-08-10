@@ -1,7 +1,7 @@
 package com.mybatis.plus.demo.service;
 
+import com.baomidou.mybatisplus.extension.service.IService;
 import com.mybatis.plus.demo.entity.Graduate;
-import com.baomidou.mybatisplus.service.IService;
 
 /**
  * <p>

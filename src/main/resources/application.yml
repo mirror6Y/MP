@@ -53,9 +53,8 @@ spring:
 #    static-path-pattern: /static/**
 
 #mybatis扫描设置
-mybatis:
+mybatis-plus:
   mapper-locations: classpath*:com/mybatis/plus/demo/mapper/*.xml
-  type-aliases-package: com.mybatis.plus.demo.entity
   #config-location: classpath:mybatis/mybatis-config.xml
 
 #pagehelper分页插件配置

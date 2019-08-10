@@ -5,7 +5,7 @@
     <parent>
         <groupId>org.springframework.boot</groupId>
         <artifactId>spring-boot-starter-parent</artifactId>
-        <version>2.1.6.RELEASE</version>
+        <version>2.1.7.RELEASE</version>
         <relativePath/> <!-- lookup parent from repository -->
     </parent>
     <groupId>com.mybatis.plus</groupId>
@@ -42,13 +42,6 @@
             <scope>test</scope>
         </dependency>
 
-        <!--模板引擎-->
-        <dependency>
-            <groupId>org.apache.velocity</groupId>
-            <artifactId>velocity</artifactId>
-            <version>1.7</version>
-        </dependency>
-
         <!--阿里巴巴druid数据库连接池--><!--http://localhost:8080/druid/index.html-->
         <dependency>
             <groupId>com.alibaba</groupId>
@@ -63,28 +56,23 @@
             <optional>true</optional>
         </dependency>
 
-        <!-- MP 核心库 -->
-        <dependency>
-            <groupId>com.baomidou</groupId>
-            <artifactId>mybatis-plus</artifactId>
-            <version>2.1.8</version>
-        </dependency>
-
-        <!--mybatis-plus分页插件-->
-        <dependency>
-            <groupId>com.baomidou</groupId>
-            <artifactId>mybatis-plus-extension</artifactId>
-            <version>3.1.1</version>
-        </dependency>
-
-        <!-- 注意顺序，这个一定要放在最下面 -->
-        <!--mybatis-plus和mybatis依赖-->
         <dependency>
             <groupId>com.baomidou</groupId>
             <artifactId>mybatis-plus-boot-starter</artifactId>
-            <version>3.1.1</version>
+            <version>3.1.2</version>
         </dependency>
 
+        <dependency>
+            <groupId>com.baomidou</groupId>
+            <artifactId>mybatis-plus-generator</artifactId>
+            <version>3.1.2</version>
+        </dependency>
+
+        <dependency>
+            <groupId>org.apache.velocity</groupId>
+            <artifactId>velocity-engine-core</artifactId>
+            <version>2.1</version>
+        </dependency>
 
     </dependencies>
 
