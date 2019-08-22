@@ -67,7 +67,7 @@ mybatis-plus:
 # 打印sql
 logging:
   level:
-    mybatis.graduate: debug
+    com.mybatis.plus.demo.mapper: debug
 
 
 
