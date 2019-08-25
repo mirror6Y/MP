@@ -65,9 +65,9 @@ mybatis-plus:
 #  params: count=countSql
 
 # 打印sql
-logging:
-  level:
-    com.mybatis.plus.demo.mapper: debug
+#logging:
+#  level:
+#    com.mybatis.plus.demo.mapper: debug
 
 
 

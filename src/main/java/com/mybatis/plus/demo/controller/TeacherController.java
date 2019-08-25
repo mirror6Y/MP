@@ -51,30 +51,13 @@ public class TeacherController {
         return Constants.C_SUCCESS;
     }
 
-
-    @ApiOperation(value = "获得教师信息列表", notes = "列表信息", httpMethod = "GET")
-    @GetMapping("getTeachers")
-    public IPage<Teacher> getTeachers(@RequestBody PageInput input) {
-        Page<Teacher> page = new Page<Teacher>(input.getPageNum(), input.getPageSize());
-        return teacherService.page(page);
-    }
-
-    @GetMapping("/getTeachers/{page}/{size}")
-    public Map<String, Object> getTeachers(@PathVariable Integer page, @PathVariable Integer size) {
-        Map<String, Object> map = new HashMap<String, Object>(16);
-        Page<Teacher> teacherPage = teacherService.pageMaps(page);
-                questionService.selectPage(new Page<>(page, size));
-
-        Page<Teacher> questionPage = questionService.selectPage(new Page<>(page, size));
-        if (questionPage.getRecords().size() == 0) {
-            map.put("code", 400);
-        } else {
-            map.put("code", 200);
-            map.put("data", questionPage);
-        }
-        return map;
-    }
-
+///{pageNo}/{size}  @PathVariable Integer pageNo, @PathVariable Integer size
+//    @ApiOperation(value = "获得教师信息列表", notes = "列表信息", httpMethod = "GET")
+//    @GetMapping("getTeachers")
+//    public IPage<Teacher> getTeachers() {
+//        Page<Teacher> page = new Page<Teacher>(1, 5);
+//        return teacherService.page(page);
+//    }
 
 }
 

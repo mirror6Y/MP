@@ -2,7 +2,7 @@ package com.mybatis.plus.demo.config;
 
 import com.baomidou.mybatisplus.extension.plugins.PaginationInterceptor;
 import com.baomidou.mybatisplus.extension.plugins.PerformanceInterceptor;
-import com.github.pagehelper.PageHelper;
+//import com.github.pagehelper.PageHelper;
 import org.mybatis.spring.annotation.MapperScan;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
@@ -25,28 +25,28 @@ public class MybatisPlusConfig {
         return page;
     }
 
-    @Bean
-    public PerformanceInterceptor performanceInterceptor() {
-        PerformanceInterceptor page = new PerformanceInterceptor();
-        page.setFormat(true);
-        return page;
-    }
-
-
-    /**
-     * 配置mybatis的分页插件pageHelper
-     */
-    @Bean
-    public PageHelper pageHelper() {
-        PageHelper pageHelper = new PageHelper();
-        Properties properties = new Properties();
-        properties.setProperty("offsetAsPageNum", "true");
-        properties.setProperty("rowBoundsWithCount", "true");
-        properties.setProperty("reasonable", "true");
-        properties.setProperty("dialect", "mysql");
-        pageHelper.setProperties(properties);
-        return pageHelper;
-    }
+//    @Bean
+//    public PerformanceInterceptor performanceInterceptor() {
+//        PerformanceInterceptor page = new PerformanceInterceptor();
+//        page.setFormat(true);
+//        return page;
+//    }
+//
+//
+//    /**
+//     * 配置mybatis的分页插件pageHelper
+//     */
+//    @Bean
+//    public PageHelper pageHelper() {
+//        PageHelper pageHelper = new PageHelper();
+//        Properties properties = new Properties();
+//        properties.setProperty("offsetAsPageNum", "true");
+//        properties.setProperty("rowBoundsWithCount", "true");
+//        properties.setProperty("reasonable", "true");
+//        properties.setProperty("dialect", "mysql");
+//        pageHelper.setProperties(properties);
+//        return pageHelper;
+//    }
 
 
 }
