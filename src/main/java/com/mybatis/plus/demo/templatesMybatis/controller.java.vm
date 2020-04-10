@@ -37,7 +37,7 @@ import java.util.Map;
  * @since ${date}
  */
 @RestController
-@RequestMapping("/(${package.Entity})")
+@RequestMapping("/(${package.Entity})" )
 #if(${superControllerClass})
 public class ${table.controllerName} extends ${superControllerClass} {
 #else
@@ -52,10 +52,9 @@ private final ${table.serviceName} i${entity}Service;
 /**
  * 添加
  */
-@PostMapping("/add${entity}")
+@PostMapping("/add${entity}" )
 public String add${entity}(){
         }
-
 
         }
         }

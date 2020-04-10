@@ -1,9 +1,15 @@
 package com.mybatis.plus.demo.config;
 
 import com.baomidou.mybatisplus.annotation.DbType;
+import com.baomidou.mybatisplus.core.toolkit.StringPool;
 import com.baomidou.mybatisplus.generator.AutoGenerator;
+import com.baomidou.mybatisplus.generator.InjectionConfig;
 import com.baomidou.mybatisplus.generator.config.*;
+import com.baomidou.mybatisplus.generator.config.po.TableInfo;
 import com.baomidou.mybatisplus.generator.config.rules.NamingStrategy;
+
+import java.util.ArrayList;
+import java.util.List;
 
 
 /**
@@ -56,6 +62,30 @@ public class MpGenerator {
         pc.setController("controller");
         mpg.setPackageInfo(pc);
 
+        // 自定义配置
+        InjectionConfig cfg = new InjectionConfig() {
+            @Override
+            public void initMap() {
+                // to do nothing
+            }
+        };
+
+        String templatePath = "/templates/mapper.xml.ftl";
+
+        // 自定义输出配置
+        List<FileOutConfig> focList = new ArrayList<>();
+        // 自定义配置会被优先输出
+        focList.add(new FileOutConfig(templatePath) {
+            @Override
+            public String outputFile(TableInfo tableInfo) {
+                // 自定义输出文件名 ， 如果你 Entity 设置了前后缀、此处注意 xml 的名称会跟着发生变化！！
+                return "/src/main/resources/mapper/" + pc.getModuleName()
+                        + "/" + tableInfo.getEntityName() + "Mapper" + StringPool.DOT_XML;
+            }
+        });
+        cfg.setFileOutConfigList(focList);
+        mpg.setCfg(cfg);
+
         // 全局配置
         GlobalConfig gc = new GlobalConfig();
         //生成文件的输出目录
@@ -70,9 +100,6 @@ public class MpGenerator {
         // 开启XML BaseColumnList
         gc.setBaseColumnList(true);
         mpg.setGlobalConfig(gc);
-
-        TemplateConfig tc = new TemplateConfig();
-        tc.setController("/templatesMybatis/controller.java.vm");
 
         // 执行生成
         mpg.execute();
